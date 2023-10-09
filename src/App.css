@@ -19,7 +19,6 @@
   border-bottom-right-radius: 250px;
   box-shadow: 0 4px 14px 0px #999;
   background-color: white;
-  /* border: 2px solid black; */
 }
 
 .form-title {
@@ -89,4 +88,101 @@
   margin-left: 2rem;
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+@media (max-width: 770px) {
+  .outer-container{
+    width: 7%;
+    height: 75%;
+    padding-inline: 15rem;
+  }
+  .container {
+    height: 30rem;
+    width: 40rem;
+    margin-left: -18rem;
+  }
+  .submit-button {
+    margin-left: 31rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  .outer-container{
+    width: 35%;
+  }
+  .container {
+    margin-left: -10rem;
+  }
+}
+
+@media (max-width: 321px) {
+  .outer-container {
+    padding-inline: 90px;
+    height: 50rem;
+    margin-top: 20rem;
+  }
+  .container{
+    width: 15rem;
+    margin-left: -4rem;
+    margin-top: -1rem;
+    height: 50rem;
+    }
+    .submit-button {
+      margin-left: 7rem;
+      margin-top: 1rem;
+    }
+    .submit-button::after {
+      width: 55.5%;
+  }  
+  .age-years {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .outer-container {
+    padding-inline: 90px;
+    height: 50rem;
+    margin-top: 20rem;
+  }
+  .container{
+    width: 16rem;
+    margin-left: -4rem;
+    margin-top: -1rem;
+    height: 50rem;
+    }
+    .submit-button {
+      margin-left: 7rem;
+      margin-top: 1rem;
+    }
+    .submit-button::after {
+      width: 55.5%;
+  }  
+  .age-years {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .outer-container {
+    padding-inline: 90px;
+    height: 50rem;
+    margin-top: 20rem;
+  }
+  .container{
+    width: 17rem;
+    margin-left: -4rem;
+    margin-top: -1rem;
+    height: 50rem;
+    }
+    .submit-button {
+      margin-left: 7rem;
+      margin-top: 1rem;
+    }
+    .submit-button::after {
+      width: 55.5%;
+  }  
+  .age-years {
+    margin-left: 1rem;
+  }
 }
