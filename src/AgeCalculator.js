@@ -33,6 +33,7 @@ function AgeCalculatorForm() {
     }
 
     const year = parseInt(formData.year);
+    let isLeapYear = (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0))
     const currentYear = new Date().getFullYear();
     if (isNaN(year) || year < 1000 || year > currentYear) {
       setError(`Year should be between 1000 and ${currentYear}`);
@@ -47,14 +48,15 @@ function AgeCalculatorForm() {
       return;
     }
 
-    if (month === 2) {
-      if (
-        (year % 4 === 0 && year % 100 !== 0) ||
-        (year % 400 === 0 && day > 29)
-      ) {
-        setError("February has 29 days in leap years");
-        return;
-      }
+    if ( isLeapYear &&
+      (month === 2 &&
+        day > 29 )
+    ) {
+      setError("February has 29 days in leap years");
+      return;
+    }
+
+    if (!isLeapYear && month === 2) {
       if (day > 28) {
         setError("February has 28 days in non-leap years");
         return;
